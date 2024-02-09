@@ -1,0 +1,215 @@
+/* Universal styling */
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, "Avant Guard", sans-serif;
+    text-align: center;
+}
+
+/* main stlying */
+main {
+    margin-left: -0.5em;
+    margin-right: -0.3em;
+}
+
+body {
+    background-color: salmon;
+}
+
+/* section for larger media */
+/* Nav section */
+.header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height: 6em;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid black;
+    background-color: teal;
+    margin-left: -0.5em;
+}
+
+.name {
+    float: left;
+    padding: 0.5em;  
+}
+
+.nav {
+    float: right;
+    text-decoration: none;
+    font-size: 2em;
+    display: flex;
+    margin-top: 0.5em;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    background: salmon;
+    border: 1px solid black;
+    border-radius: 15px 50px 30px 5px;
+    margin: 0.3em;
+}
+
+a:hover {
+    background-color: red;
+}
+
+/* main content */
+.contentcontainer {
+    margin-top: 10em;
+    
+}
+.lrgcontainer {
+    display: inline-flex;
+    border: 1px solid black;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.pic {
+    width: 40%;
+    flex-grow: 2;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.description {
+    width:60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* section to remove sml media content */
+.smallmedia {
+    display: none;
+}
+
+.phonetitle {
+    display: none;
+}
+
+.dropbtn {
+    display: none;
+}
+
+
+
+/* section for smaller media */
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+.contentcontainer {
+    display: none;
+}
+
+.smallnavbar {
+    display: none;
+}
+
+.smallmedia {
+    display: flex;
+    margin-top: 7em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.smlcontainer {
+    width: 80%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    height: 40em;
+    margin: 1em;
+    background-size: cover;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+#whoweare {
+    background-image: url("https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODZ8fGNsaW1iaW5nfGVufDB8fDB8fHww");
+    
+}
+
+#trad {
+    background-image: url("https://images.unsplash.com/photo-1631045487342-a6143f645e2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGNsaW1iaW5nfGVufDB8fDB8fHww")
+}
+
+#boulder {
+    background-image: url("https://images.unsplash.com/photo-1522362485439-83fcff4673f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJvdWxkZXJpbmd8ZW58MHx8MHx8fDA%3D")
+}
+}
+
+/* Menu for mobile phones */
+@media only screen and (max-width: 1000px) {
+.header {
+    display: none;
+}
+
+.contentcontainer {
+    display: none;
+}
+
+
+.dropbtn {
+    background-color: teal;
+    color: black;
+    border: none;
+    display: flex;
+    margin-left: 20%;
+    font-size: 2rem;
+}
+
+.dropbtn:hover {
+    background-color: red;
+}
+
+.smallmedia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.smlcontainer {
+    width: 80%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    height: 30em;
+    margin: 1em;
+    background-size: cover;
+    flex-shrink: 10;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+#whoweare {
+    background-image: url("https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODZ8fGNsaW1iaW5nfGVufDB8fDB8fHww");
+    
+}
+
+#trad {
+    background-image: url("https://images.unsplash.com/photo-1631045487342-a6143f645e2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGNsaW1iaW5nfGVufDB8fDB8fHww")
+}
+
+#boulder {
+    background-image: url("https://images.unsplash.com/photo-1522362485439-83fcff4673f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJvdWxkZXJpbmd8ZW58MHx8MHx8fDA%3D")
+}
+
+}
